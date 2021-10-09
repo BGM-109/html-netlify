@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영문주소 생성기</title>
+</head>
+<body>
+    <div class="flex flex-col items-center justify-start py-3 px-8 w-full h-screen bg-gray-100">
+        <p class="text-lg font-bold p-4">영문주소 생성기</p>
+        <input
+            id = "name"
+            placeholder="이름"
+            class="border border-transparent rounded-lg p-2 m-2 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent " />
+        <input 
+            id = "phone"
+            placeholder="핸드폰번호"
+            class="border border-transparent rounded-lg p-2 m-2 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent " />
+        <div class="h-1/2 w-full m-2">
+            <iframe
+                src="https://s.search.naver.com/n/csearch/content/eprender.nhn?where=nexearch&pkid=252&q=%EB%84%A4%EC%9D%B4%EB%B2%84%20%EC%98%81%EB%AC%B8%EC%A3%BC%EC%86%8C%20%EB%B3%80%ED%99%98%EA%B8%B0&key=address_eng"
+                title="description" class="w-full h-full border"></iframe>
+        </div>
+        <input 
+            id = "address"
+            placeholder="주소를 위에서 복사해서 넣어주세요"
+            class="w-1/2 border border-transparent rounded-lg p-2 m-2 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent " />
+        <input 
+            id = "postcode"
+            placeholder="우편번호"
+            class="border border-transparent rounded-lg p-2 m-2 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent " />
+        <button
+            onclick="getAllValue()"
+            class="rounded py-2 px-4 m-2 text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50">
+            복사하기
+        </button>
+    </div>
+    <script src="public/js/app.js"></script>
+</body>
+</html>
